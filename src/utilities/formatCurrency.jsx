@@ -1,12 +1,9 @@
 import React from "react";
-import { FormattedNumber } from "react-intl";
+export function CurrencyFormatter({ number }) {
+  const formattedCurrency = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(number);
 
-const CURRNCY_FORMATTER = {
-  format: (number) => (
-    <FormattedNumber value={number} style="currency" currency="USD" />
-  ),
-};
-
-export function formatCurrency(number) {
-  return CURRNCY_FORMATTER.format(number);
+  return <div>{formattedCurrency}</div>;
 }

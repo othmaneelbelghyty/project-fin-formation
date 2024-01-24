@@ -7,21 +7,21 @@ function Navbar() {
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3" expand="lg">
       <Container>
-        <NavbarBs.Brand href="/">My App</NavbarBs.Brand>
+        <NavbarBs.Brand href="/">ELBELGHYTY-CAR</NavbarBs.Brand>
         <NavbarBs.Toggle aria-controls="basic-navbar-nav" />
         <NavbarBs.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/">
+            <Nav.Link as={NavLink} href="/">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/store">
+            <Nav.Link as={NavLink} href="/store">
               Store
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about">
+            <Nav.Link as={NavLink} href="/about">
               About
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about">
-              Product 
+            <Nav.Link as={NavLink} href="/product">
+              Product
             </Nav.Link>
           </Nav>
           {cartQuantity > 0 && (

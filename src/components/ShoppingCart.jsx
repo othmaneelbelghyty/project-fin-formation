@@ -2,7 +2,7 @@ import React from "react";
 import { Offcanvas } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import CartItem from "./CartItem";
-import { formatCurrency } from "../utilities/formatCurrency";
+// import { formatCurrency } from "../utilities/formatCurrency";
 import storeItems from "../data/items.json";
 
 const ShoppingCart = ({ isOpen }) => {
@@ -20,12 +20,10 @@ const ShoppingCart = ({ isOpen }) => {
           ))}
           <div className="ms-auto fw-bold fs-5">
             Total{" "}
-            {formatCurrency(
-              cartItems.reduce((total, cartItem) => {
-                const storeItem = storeItems.find((i) => i.id === cartItem.id);
-                return total + (storeItem?.price || 0) * cartItem.quantity;
-              }, 0)
-            )}
+            {cartItems.reduce((total, cartItem) => {
+              const storeItem = storeItems.find((i) => i.id === cartItem.id);
+              return total + (storeItem?.price || 0) * cartItem.quantity;
+            }, 0)}
           </div>
         </div>
       </Offcanvas.Body>

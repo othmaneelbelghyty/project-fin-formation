@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { formatCurrency } from "../utilities/formatCurrency";
+// import { formatCurrency } from "../utilities/formatCurrency";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const StoreItem = ({ id, name, price, imgUrl }) => {
           <Link to="/product">
             <span className="fs-2">{name}</span>
           </Link>
-          <span className="ms-2 text-muted">{formatCurrency(price)}</span>
+          <span className="ms-2 text-muted">{price + "$"}</span>
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
