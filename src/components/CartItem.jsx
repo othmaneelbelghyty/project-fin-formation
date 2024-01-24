@@ -29,10 +29,10 @@ const CartItem = ({ id, quantity }) => {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          {formatCurrency(item.price)}
+          {item.price + " $"}
         </div>
       </div>
-      <div className="me-3">{formatCurrency(item.price * quantity)}</div>
+      <div className="me-3">{item.price * quantity + " $"}</div>
       <Button
         variant="outline-danger"
         size="sm"
