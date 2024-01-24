@@ -1,5 +1,11 @@
 import React from "react";
-import { Navbar as NavbarBs, Container, Nav, NavLink } from "react-bootstrap";
+import {
+  Navbar as NavbarBs,
+  Container,
+  Nav,
+  NavLink,
+  Button,
+} from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 function Navbar() {
