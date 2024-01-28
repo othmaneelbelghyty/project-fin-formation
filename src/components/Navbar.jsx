@@ -4,7 +4,7 @@ import {
   Container,
   Nav,
   NavLink,
-  Button,
+  Button
 } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 

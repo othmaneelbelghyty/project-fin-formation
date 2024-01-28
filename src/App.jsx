@@ -7,11 +7,12 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ShoppingCartProvider from "./context/ShoppingCartContext";
 import Product from "./pages/Product";
-
+import DarkMode from "./DarkMode/DarkMode";
 const App = () => (
   <ShoppingCartProvider>
     <Navbar />
     <Container>
+      <DarkMode />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
